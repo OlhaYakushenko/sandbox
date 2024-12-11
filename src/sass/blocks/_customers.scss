@@ -1,0 +1,107 @@
+.customers{
+    position: relative;
+    padding-top: 150px;
+    background: linear-gradient(180deg, #f0f8fe 0%, rgba(255, 255, 255, 0) 100%);
+    padding-bottom: 140px;
+    @media (max-width: 991px){
+        padding-bottom: 100px;
+      }
+      @media (max-width: 767px){
+        padding-top: 100px;
+      }  
+      @media (max-width: 575px){
+        padding-top: 75px;
+     } 
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 134px;
+        top:-68px;
+        background:url('../img/mask_bg_about.svg') no-repeat center / cover;
+        z-index: 1;
+    }
+    &__descr{
+        text-align: center;
+        max-width: 667px;
+        width: 100%;
+        margin: 15px auto 50px;
+    }
+}
+
+.reviews{
+    display: grid;
+    gap:30px;
+    grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
+    grid-auto-rows: 9px;
+   
+    place-content: space-between;
+    @media (max-width: 991px){
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        grid-auto-rows: 15px;
+      }
+
+      @media (max-width: 767px){
+            display: flex;
+            flex-wrap: wrap;
+        }
+      
+    &__item{
+        border-radius: 8px;
+  
+        box-shadow: 0 5px 35px 0 rgba(30, 34, 40, 0.07);
+        background: #fff;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+   
+        &:nth-child(1) { grid-row: span 9; }
+        &:nth-child(2) { grid-row: span 11; }
+        &:nth-child(3) { grid-row: span 10; }
+        &:nth-child(4) { grid-row: span 10; }
+        &:nth-child(5) { grid-row: span 9; }
+        &:nth-child(6) { grid-row: span 9; }
+        @media (max-width: 767px){
+            gap: 50px;
+        }
+        @media (max-width: 575px){
+            padding: 25px;
+        }
+    }
+    &__text{
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 170%;
+        color: $text-color;
+    }
+    &__profile{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+    }
+    &__icon{
+        object-fit: cover;
+        border-radius: 35px;
+        width: 70px;
+        height: 70px;
+    }
+    &__title{
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 19px;
+        line-height: 150%;
+        color: $accent-color-text;
+    }
+    &__subtitle{
+        margin-top: 9px;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 170%;
+        color: $text-color;
+    }
+}

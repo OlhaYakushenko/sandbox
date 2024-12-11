@@ -1,0 +1,190 @@
+.footer{
+    position: relative;
+    background: #343F52;
+    padding-top: 150px;
+    padding-bottom: 104px;
+    @media (max-width: 1199px){
+        padding-top: 100px;
+      }
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 134px;
+        top:-68px;
+        background:url('../img/footer_mask.svg') no-repeat center / cover;
+        z-index: 1;
+    }
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    &__title{
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 145%;
+        color: #fff;
+    }
+    &__copyright{
+        width: 140px;
+        @media (max-width: 575px){
+            width: 100%;
+            text-align: center;
+            order: 4;
+            margin-top: 50px;
+        }
+        img{
+            @media (max-width: 575px){
+               margin: auto;
+            }
+        }
+        p{
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 170%;
+            color: #cacaca;
+            margin-top: 24px;
+            margin-bottom: 30px;
+
+        }
+    }
+    &__soc{
+        list-style: none;
+        display: flex;
+        gap:14px;
+        @media (max-width: 575px){
+           justify-content: center;
+        }
+        li{
+           
+            a{
+                color:#fff;
+                font-size: 20px;
+                transition: all .3s;
+                &:hover{
+                    color:$accent-color;
+                }
+            }
+        }
+        
+    }
+
+    &__adr{
+        width: 160px;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 170%;
+        color: #cacaca;
+        @media (max-width: 575px){
+            order: 2;
+            margin-top: 50px;
+        }
+        address{
+            margin-top: 19px;
+            margin-bottom: 19px;
+            font-style: normal;
+        }
+        a{
+            color: #cacaca;
+        }
+    }
+
+    &__menu{
+        @media (max-width: 575px){
+            order: 3;
+            margin-top: 50px;
+        }
+        ul{
+            list-style: none;
+            margin-top: 20px;
+            li{
+                margin-bottom: 7px;
+                a{
+                    font-family: var(--font-family);
+                    font-weight: 500;
+                    font-size: 17px;
+                    line-height: 170%;
+                    color: #cacaca;
+                }
+            }
+        }
+    }
+}
+
+.subscription-form {
+    width: 305px;
+    @media (max-width: 767px){
+        width: 100%;
+      }
+      @media (max-width: 575px){
+        order: 1;
+    }
+   p{
+    margin-top: 19px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 170%;
+    color: #cacaca;
+    margin-bottom: 30px;
+   }
+    input[type="email"] {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px 0 0 8px;
+    width: 218px;
+    height: 52px;
+    box-shadow: 0 0 25px 0 rgba(30, 34, 40, 0.04);
+    background: rgba(255, 255, 255, 0.03);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 170%;
+    color: #959ca9;
+    padding: 17px 21px;
+    outline: none;
+    @media (max-width: 575px){
+        width: 200px;
+    }
+    }
+
+    button {
+        border: 2px solid #5eb9f0;
+        border-radius: 0 8px 8px 0;
+        width: 82px;
+        height: 52px;
+        cursor: pointer;
+        background:$accent-color;
+        outline: none;
+        border:none;
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 170%;
+        text-align: center;
+        color: #fff;
+        transition: all .3s;
+        margin-left: -5px;
+        &:hover{
+            color: $accent-color-text;
+        }
+    }
+    
+}
+
+
+.success-message {
+    display: none;
+    color: green;
+    margin-top: 10px;
+}
+.error-message {
+    display: none;
+    color: red;
+    margin-top: 10px;
+}

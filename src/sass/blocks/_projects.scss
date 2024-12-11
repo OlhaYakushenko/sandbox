@@ -1,0 +1,135 @@
+.projects{
+    padding-top: 36px;
+    padding-bottom: 285px;
+    overflow: hidden;
+    position: relative;
+    &__subtitle{
+        margin: 15px auto 0 auto;
+        text-align: center;
+        max-width: 778px;
+        width: 100%;
+    }
+    @media (max-width: 575px){
+        padding-bottom: 230px;
+     } 
+}
+
+
+.carousel-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 300px 1fr; 
+    width: 100%;
+    max-width: 100%;
+    margin-top: 50px;
+    @media (max-width: 1199px) {
+        display: block; 
+        padding: 0; 
+    }
+}
+.carousel{
+    grid-column: 2; 
+    width: 100%;
+    overflow: hidden;
+    @media (max-width: 1199px) {
+        padding-left: 15px;
+
+    }
+    @media (max-width: 767px) {
+        padding-left: 0;
+    }
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap:30px;
+    @media (max-width: 1199px) {
+        gap: 20px;
+    }
+    @media (max-width: 767px) {
+        gap: 0;
+    }
+}
+
+.slide {
+    flex-shrink: 0;
+    width: 630px;
+    position: relative;
+    @media (max-width: 1199px) {
+        width: 435px;
+
+    }
+    @media (max-width: 767px) {
+        width: 100%;
+
+    }
+   
+    &__img{
+        border-radius: 8px;
+        width: 100%;
+        height: auto;
+     
+    }
+    &__title{
+        margin-top: 37px;
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 23px;
+        line-height: 140%;
+        color: $accent-color-text;
+        @media (max-width: 1199px) {
+           padding: 0 15px;
+        }
+    }
+   &__subtitle{
+        margin-top: 12px;
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 170%;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #9499a3;
+        @media (max-width: 1199px) {
+            padding: 0 15px;
+         }
+    }
+}
+
+
+
+
+
+.controls {
+    position: absolute; 
+    bottom:-95px; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    display: flex;
+    justify-content: space-between; 
+    width: 102px; 
+    pointer-events: none; 
+   
+}
+
+.controls button {
+    pointer-events: all; 
+    border-radius: 50%; 
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px 0 rgba(30, 34, 40, 0.02);
+    background: rgba(94, 185, 240, 0.7);
+    opacity: 0.7;
+    border: none;
+    color: #fff;
+}
+
+.controls button:hover {
+    box-shadow: 0 5px 15px 0 rgba(30, 34, 40, 0.02);
+    background: rgba(94, 185, 240, 0.9);
+}
+
